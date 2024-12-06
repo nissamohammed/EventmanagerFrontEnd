@@ -30,7 +30,6 @@ Install Dependencies
 JWT_SECRET=
 PORT=
 
-
 Run the Application
 
 Open two terminals:
