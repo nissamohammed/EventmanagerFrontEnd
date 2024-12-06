@@ -1,5 +1,7 @@
 import React from 'react'
 import '../components/navbar.css';
+import { Link } from 'react-router-dom';
+
 function Navbar() {
   return (
     <>
@@ -7,10 +9,10 @@ function Navbar() {
         <div className="container">
           <h1 className='text-light'>Event Manager</h1>
           <ul>
-            <li><a href="/dashboard">Dashboard</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/events/new">Create Event</a></li>
-            <li><a href="/">Logout</a></li>
+            <li><Link to={'/dashboard'}>Dashboard</Link></li>
+            <li><Link to={'/events'}>Events</Link></li>
+            <li><Link to={'/events/new'}>Create Event</Link></li>
+            <li><Link to={'/'}>Logout</Link></li>
           </ul>
         </div>
       </nav>
