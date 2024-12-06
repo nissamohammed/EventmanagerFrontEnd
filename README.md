@@ -26,12 +26,9 @@ Install Dependencies
       npm i cors dotenv express mongoose
       npm i jsonwebtoken  
       Environment Variables
-      Create a .env file in the root directory with the following variables:
-
-      MONGO_URI=<Your MongoDB Connection String>  
+      Create a .env file in the root directory with the following variables: MONGO_URI=<Your MongoDB Connection String>  
       JWT_SECRET=<Your JWT Secret Key>  
       PORT=<Server Port>  
-
 
 Run the Application
 
