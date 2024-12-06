@@ -3,6 +3,8 @@ import '../TicketBooking/booking.css'
 import Navbar from '../Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTicket } from '@fortawesome/free-solid-svg-icons/faTicket';
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
+import { Link } from "react-router-dom";
 
 function Booking() {
     const [formData, setFormData] = useState({
@@ -33,7 +35,7 @@ function Booking() {
     <>
     <Navbar/>
     <div className="booking-form mt-5" style={{ maxWidth: "400px", margin: "auto" }}>
-    
+    <Link to={'/dashboard'} style={{textDecoration:'underline'}}><FontAwesomeIcon icon={faArrowLeft} className="me-2"/>Back to Dashboard</Link>
       <h2 className='text-primary fw-bolder'><FontAwesomeIcon icon={faTicket} style={{color: "#f10404",}} className='me-2'/>Event Ticket Booking</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

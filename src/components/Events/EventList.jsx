@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import './eventlist.css'
 import Navbar from '../Navbar'
 import { allEventsApi } from "../../services/allApi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 
 function EventList() {
   const navigate = useNavigate()
@@ -48,6 +50,7 @@ navigate('/ticketbooking')
     <Navbar/>
     <div className="event-list-container">
   <div className="search-bar d-flex flex-column align-items-start p-3">
+    <Link to={'/dashboard'} style={{textDecoration:'underline'}}><FontAwesomeIcon icon={faArrowLeft} className="me-2"/>Back to Dashboard</Link>
     <h1 className="title text-primary fw-bolder">All Event List</h1>
     <input
       type="text"

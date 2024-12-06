@@ -3,7 +3,8 @@ import Login from './components/Auth/Login'
 import Register from './components/Auth/Register'
 import EventForm from './components/Events/EventForm'
 import EventList from './components/Events/EventList'
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+//import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from 'react-router-dom'
 import React from "react";
 import Dashboard from './pages/Dashboard';
 import Pagenotfound from './pages/Pagenotfound';
@@ -13,7 +14,7 @@ import Booking from './components/TicketBooking/Booking'
 function App() { 
   return (
     <>
-    <Router>
+    
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
@@ -25,7 +26,7 @@ function App() {
       <Route path="/ticketbooking" element={<Booking />} />
       <Route path='*' element={<Pagenotfound/>}/>
     </Routes>
-  </Router>    
+     
     </>
   )
 }

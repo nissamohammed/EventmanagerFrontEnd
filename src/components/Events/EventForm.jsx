@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import './eventform.css';
 import Navbar from '../Navbar';
 import { addEventApi } from "../../services/allApi";
-import { CancelToken } from "axios";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
+import { Link } from "react-router-dom";
 
 function EventForm() {
   const [token, settoken] = useState("");
@@ -59,7 +61,9 @@ console.log(token);
     <>
       <Navbar />
       <div className="event-form-container">
+      
         <form className="event-form">
+        <Link to={'/dashboard'} style={{textDecoration:'underline'}}><FontAwesomeIcon icon={faArrowLeft} className="me-2"/>Back to Dashboard</Link>
           <h2> Create Event</h2>
           <div className="form-group">
             <label htmlFor="title">Event Title</label>

@@ -10,6 +10,9 @@ import { faRightToBracket } from '@fortawesome/free-solid-svg-icons/faRightToBra
 
 function Home() {
   const navigate = useNavigate();
+  const handlelogin = () => {
+    navigate('/login');
+  };
   const handleBooking = () => {
     navigate('/login');
   };
@@ -24,7 +27,7 @@ function Home() {
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
-              <li><a href="/login"><button className='btn btn-outline-warning'>
+              <li><a href="/login"><button className='btn btn-outline-warning' onClick={handlelogin}> 
               <FontAwesomeIcon icon={faRightToBracket} className='me-2'/>
                 Sign-in</button></a></li>
             </ul>

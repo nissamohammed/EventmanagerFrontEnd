@@ -24,16 +24,14 @@ function Login() {
     const result = await loginApi({email,password})
     console.log(result);
     if(result.status==200){
-      alert('login successfull')
       sessionStorage.setItem("existingUser", JSON.stringify(result.data.existingUser))
       sessionStorage.setItem("token", result.data.token)
       setuserdetails({
         email: "",
         password: ""
       })
-      setTimeout(()=>{
-        navigate('/dashboard')
-      },500)
+     navigate('/dashboard')
+      
     }else{
       alert(result.response.data)
     }
