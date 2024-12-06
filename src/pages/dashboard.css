@@ -1,0 +1,158 @@
+/* Dashboard Styles */
+.dashboard {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #edc92b, #f4ca0d);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center align text in the dashboard */
+}
+
+/* Header Section */
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+h4 {
+  font-size: 2.1rem;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #007bff;
+  text-transform: uppercase;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Add New Event Button */
+.add-new-btn {
+  /*background-color: #28a745;*/
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: #000000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.add-new-btn:hover {
+  background: linear-gradient(135deg,#acb6e5,#74ebd5);
+}
+
+/* Events List Container */
+.events-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  justify-items: center; /* Center the event cards in the grid */
+  text-align: center; /* Center-align the h2 and all content in this container */
+}
+
+/* Event List Heading (h2) */
+.events-list h2 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center; /* Ensures h2 is centered */
+  margin-bottom: 20px;
+
+}
+
+/* Event Card Styles (Box-like) */
+.event-card {
+  background-color: #f6f4f4;
+  border-radius: 8px;
+  padding: 0 0 0 0 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Larger shadow for a box effect */
+  transition: transform 0.3s ease;
+ /* display: flex;*/
+  /*flex-direction: column;*/
+  border: 2px solid #ddd; /* Adding a border to the card to make it look like a box */
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+}
+
+.event-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 0;
+}
+
+.event-card p {
+  color: #555;
+  margin: 10px 0;
+  text-align: justify;
+}
+
+.event-date {
+  font-weight: bold;
+  color: #147ae8;
+}
+
+.location {
+  font-style: italic;
+  color: #666;
+}
+
+/* Button Styles inside Cards */
+.edit-btn,
+.delete-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 10px;
+ /* display: inline-block;*/
+}
+
+.edit-btn {
+  background-color: #6c757d;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #5a6268;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .events-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .add-new-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .add-new-btn {
+    font-size: 1.1rem;
+  }
+}

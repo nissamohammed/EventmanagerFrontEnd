@@ -1,0 +1,109 @@
+
+ /* Container Styling */
+.event-list-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #edc92b, #f4ca0d);
+}
+
+/* Search Bar Styling */
+.search-bar {
+  background-color: #ffffff;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar .title {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.search-bar .search-input {
+  width: 100%;
+  max-width: 500px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+
+.search-bar .search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Event List Styling */
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Event Card Styling */
+.event-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-title {
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.event-description {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.event-date,
+.event-location {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Message Styling */
+.no-events-message,
+.login-message {
+  text-align: center;
+  color: #555;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .search-bar {
+    padding: 15px;
+  }
+
+  .search-bar .title {
+    font-size: 1.5rem;
+  }
+
+  .search-bar .search-input {
+    max-width: 100%;
+  }
+
+  .event-card {
+    padding: 15px;
+  }
+
+  .event-title {
+    font-size: 1.3rem;
+  }
+}

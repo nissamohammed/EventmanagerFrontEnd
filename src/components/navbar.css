@@ -1,0 +1,33 @@
+
+.navbar {
+    background: #20201fed;
+    color: #fff;
+    padding: 15px 0;
+ 
+  }
+  
+  .navbar h1 {
+    margin: 0 ;
+    font-size: 1.5rem;
+    font-family:'Courier New', Courier, monospace
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar ul li {
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  
